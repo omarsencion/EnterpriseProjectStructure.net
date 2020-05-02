@@ -6,6 +6,13 @@
 
   <ItemGroup>
     <PackageReference Include="IocServiceStack" Version="2.0.5" />
+    <PackageReference Include="Microsoft.AspNetCore" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Org.Domain.Abstractions.Business\Org.Domain.Abstractions.Business.csproj" />
+    <ProjectReference Include="..\Org.Domain.Models\Org.Domain.Models.csproj" />
   </ItemGroup>
 
 </Project>

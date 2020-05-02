@@ -6,11 +6,12 @@
 
   <ItemGroup>
     <PackageReference Include="IocServiceStack" Version="2.0.5" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="2.2.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.2.2" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Org.Domain.Abstractions.DataBridge\Org.Domain.Abstractions.DataBridge.csproj" />
+    <ProjectReference Include="..\Org.Domain.Abstractions.Common\Org.Domain.Abstractions.Common.csproj" />
+    <ProjectReference Include="..\Org.Domain.Abstractions.Database\Org.Domain.Abstractions.Database.csproj" />
     <ProjectReference Include="..\Org.Domain.Entities\Org.Domain.Entities.csproj" />
   </ItemGroup>
 

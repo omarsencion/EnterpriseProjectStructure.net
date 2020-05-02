@@ -5,7 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Org.Domain.Entities\Org.Domain.Entities.csproj" />
+    <ProjectReference Include="..\Org.Domain.Abstractions.Common\Org.Domain.Abstractions.Common.csproj" />
   </ItemGroup>
 
 </Project>

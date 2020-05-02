@@ -8,4 +8,9 @@
     <PackageReference Include="IocServiceStack" Version="2.0.5" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Org.Domain.Abstractions.Database\Org.Domain.Abstractions.Database.csproj" />
+    <ProjectReference Include="..\Org.Domain.Entities\Org.Domain.Entities.csproj" />
+  </ItemGroup>
+
 </Project>

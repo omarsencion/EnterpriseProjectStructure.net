@@ -5,7 +5,15 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="FluentValidation" Version="8.6.2" />
     <PackageReference Include="IocServiceStack" Version="2.0.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Org.Domain.Abstractions.Business\Org.Domain.Abstractions.Business.csproj" />
+    <ProjectReference Include="..\Org.Domain.Abstractions.Common\Org.Domain.Abstractions.Common.csproj" />
+    <ProjectReference Include="..\Org.Domain.Abstractions.Data\Org.Domain.Abstractions.Data.csproj" />
+    <ProjectReference Include="..\Org.Domain.Abstractions.Storage\Org.Domain.Abstractions.Storage.csproj" />
   </ItemGroup>
 
 </Project>

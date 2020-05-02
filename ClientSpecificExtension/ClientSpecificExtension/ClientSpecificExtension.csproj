@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="IocServiceStack" Version="2.0.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Org.Domain.Abstractions.Business">
+      <HintPath>..\..\AwesomeProjectStructure.v1\Org.Domain.Abstractions.Business\bin\Debug\netcoreapp2.2\Org.Domain.Abstractions.Business.dll</HintPath>
+    </Reference>
+    <Reference Include="Org.Domain.Entities">
+      <HintPath>..\..\AwesomeProjectStructure.v1\Org.Domain.Abstractions.Business\bin\Debug\netcoreapp2.2\Org.Domain.Entities.dll</HintPath>
+    </Reference>
+    <Reference Include="Org.Domain.Models">
+      <HintPath>..\..\AwesomeProjectStructure.v1\Org.Domain.Abstractions.Business\bin\Debug\netcoreapp2.2\Org.Domain.Models.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

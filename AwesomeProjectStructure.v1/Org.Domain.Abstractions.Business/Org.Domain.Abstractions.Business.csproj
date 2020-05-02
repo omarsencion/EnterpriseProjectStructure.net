@@ -8,4 +8,8 @@
     <PackageReference Include="IocServiceStack" Version="2.0.5" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Org.Domain.Models\Org.Domain.Models.csproj" />
+  </ItemGroup>
+
 </Project>

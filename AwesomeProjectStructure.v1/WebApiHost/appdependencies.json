@@ -1,3 +1,30 @@
 ﻿{
-
+  "AppDependencies": {
+    "Name": "BusinessServices",
+    "Modules": [
+      "Org.Domain.Business"
+    ],
+    "Dependencies": {
+      "Name": "Data",
+      "Modules": [
+        "Org.Domain.Data",
+        "Org.Domain.Storage.Disk"
+      ],
+      "Dependencies": {
+        "Name": "DbContext",
+        "Modules": [
+          "Org.Domain.SqlServerDatabase"
+        ]
+      }
+    }
+  },
+  "SharedDependencies": {
+    "Modules": [
+      "Org.Domain.Common"
+    ]
+  },
+  "StrictMode": true,
+  "Addition": [
+    //{ "Module": "ClientSpecificExtension" }
+  ]
 }

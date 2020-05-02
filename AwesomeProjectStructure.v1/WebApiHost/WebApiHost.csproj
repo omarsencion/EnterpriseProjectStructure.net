@@ -17,8 +17,20 @@
 
   <ItemGroup>
     <PackageReference Include="IocServiceStack" Version="2.0.5" />
-    <PackageReference Include="IocServiceStack.Config" Version="0.0.4" />
+    <PackageReference Include="IocServiceStack.Config" Version="0.0.5" />
     <PackageReference Include="Microsoft.AspNetCore.App" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Org.Domain.Business\Org.Domain.Business.csproj" />
+    <ProjectReference Include="..\Org.Domain.Common\Org.Domain.Common.csproj" />
+    <ProjectReference Include="..\Org.Domain.Core\Org.Domain.Core.csproj" />
+    <ProjectReference Include="..\Org.Domain.Data\Org.Domain.Data.csproj" />
+    <ProjectReference Include="..\Org.Domain.SqlServerDatabase\Org.Domain.SqlServerDatabase.csproj" />
+    <ProjectReference Include="..\Org.Domain.Storage.AwsS3\Org.Domain.Storage.AwsS3.csproj" />
+    <ProjectReference Include="..\Org.Domain.Storage.Azure\Org.Domain.Storage.Azure.csproj" />
+    <ProjectReference Include="..\Org.Domain.Storage.Disk\Org.Domain.Storage.Disk.csproj" />
+    <ProjectReference Include="..\Org.Domain.WebApi\Org.Domain.WebApi.csproj" />
   </ItemGroup>
 
 </Project>
