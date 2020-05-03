@@ -3,6 +3,7 @@
     "Name": "BusinessServices",
     "Modules": [
       "Org.Domain.Core.Business"
+      //"ClientSpecificExtension"
     ],
     "Dependencies": {
       "Name": "Data",
@@ -23,8 +24,11 @@
       "Org.Domain.Core.Common"
     ]
   },
-  "StrictMode": true,
+  "StrictMode": false,
   "Addition": [
-    //{ "Module": "ClientSpecificExtension" }
+    {
+      //"Module": "ClientSpecificExtension",
+      //"LoadFrom": "./bin/Debug/netcoreapp2.2/" //For Devlopment Environment
+    }
   ]
 }

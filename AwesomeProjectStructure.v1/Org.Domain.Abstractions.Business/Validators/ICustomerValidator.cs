@@ -1,4 +1,4 @@
-﻿namespace Org.Domain.Core.Business.Validators
+﻿namespace Org.Domain.Abstractions.Business
 {
     using FluentValidation;
     using IocServiceStack;

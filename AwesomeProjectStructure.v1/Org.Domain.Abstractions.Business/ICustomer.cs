@@ -10,5 +10,7 @@
         void Create(CustomerData customer);
         void Update(CustomerData customer);
         void Delete(int customerId);
+        //Test Purpose
+        string Validate(CustomerData customer);
     }
 }

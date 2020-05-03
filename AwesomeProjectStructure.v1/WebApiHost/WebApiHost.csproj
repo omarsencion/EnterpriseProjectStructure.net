@@ -17,7 +17,7 @@
 
   <ItemGroup>
     <PackageReference Include="IocServiceStack" Version="2.0.5" />
-    <PackageReference Include="IocServiceStack.Config" Version="0.0.5" />
+    <PackageReference Include="IocServiceStack.Config" Version="0.0.7" />
     <PackageReference Include="Microsoft.AspNetCore.App" />
   </ItemGroup>
 

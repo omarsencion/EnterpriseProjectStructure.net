@@ -1,18 +1,20 @@
-﻿namespace Org.Domain.Core.Business.Validators
+﻿
+namespace ClientSpecificExtension
 {
+
     using FluentValidation;
     using IocServiceStack;
 
-    using Entities;
-    using Abstractions.Business;
+    using Org.Domain.Abstractions.Business;
+    using Org.Domain.Entities;
 
     [Service]
-    public class CustomerValidator : AbstractValidator<CustomerEntity>, ICustomerValidator
+    public class XyzCustomerValidator : AbstractValidator<CustomerEntity>, ICustomerValidator
     {
         public const string InsertRuleset = "Insert";
         public const string UpdateRuleset = "Update";
 
-        public CustomerValidator()
+        public XyzCustomerValidator()
         {
             RuleSet(InsertRuleset, () =>
             {
@@ -36,10 +38,11 @@
             RuleFor(customer => customer.LastName)
                 .NotEmpty();
 
-            RuleFor(customer => customer.City)
-                .NotEmpty();
-                    //.Length(10)
-                    //    .Matches("^[0-9]*$");
+            // Remove city as mandatory for this customer
+            //RuleFor(customer => customer.City)
+            //    .NotEmpty();
+            //.Length(10)
+            //    .Matches("^[0-9]*$");
         }
     }
 }

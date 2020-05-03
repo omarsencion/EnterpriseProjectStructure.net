@@ -56,6 +56,17 @@
         }
 
 
+        [HttpPost(nameof(Validate))]
+        public string Validate([FromBody]CustomerData customer)
+        {
+            ModelState.Verify();
+
+            using (var customerService = _customerService.Get())
+            {
+                return customerService.Validate(customer);
+            }
+        }
+
         #region Private Methods
         private void SetUploadedFileStream(CustomerData customer)
         {

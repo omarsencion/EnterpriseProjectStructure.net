@@ -1,8 +1,11 @@
 ﻿namespace Org.Domain.Storage
 {
     using System;
+    using IocServiceStack;
+
     using Org.Domain.Abstractions.Storage;
 
+    [Service]
     public class Storage : IStorage
     {
         public byte[] Read(string fileName)

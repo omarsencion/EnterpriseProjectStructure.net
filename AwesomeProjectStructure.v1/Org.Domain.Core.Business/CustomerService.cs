@@ -10,7 +10,9 @@
     using Abstractions.Storage;
     using Abstractions.Business;
     using Validators;
- 
+    using System.Text;
+    using System.Diagnostics;
+
     [Service]
     public sealed class CustomerService : ICustomer
     {
@@ -33,6 +35,20 @@
         public void Dispose()
         {
             _customerRepository.Dispose();
+        }
+
+        //Test Purpose
+        public string Validate(CustomerData customer)
+        {
+            //Validate the customer data
+            var result = _customerValidator.Validate(customer.Customer, ruleSet: CustomerValidator.InsertRuleset);
+
+            var sb = new StringBuilder();
+            foreach (var error in result.Errors)
+            {
+                sb.Append(error.ErrorMessage);
+            }
+            return sb.ToString();
         }
 
         public void Create(CustomerData customer)
@@ -77,12 +93,12 @@
 
         private void DeleteFiles(int customerId)
         {
-                // 
+            // 
         }
 
         private void SaveFiles(CustomerData customer)
         {
-            
+
         }
 
         #endregion
