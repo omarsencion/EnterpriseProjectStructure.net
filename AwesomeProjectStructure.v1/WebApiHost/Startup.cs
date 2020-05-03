@@ -1,4 +1,4 @@
-﻿namespace AwesomeProjectStructurev1
+﻿namespace WebApiHost
 {
     using Microsoft.AspNetCore.Builder;
     using Microsoft.AspNetCore.Hosting;
@@ -9,7 +9,8 @@
 
     using Org.Domain.WebApi;
     using Org.Domain.Abstractions.Common;
-    using Org.Domain.Common;
+    using Org.Domain.Core.Common;
+    using Middlewares;
 
     public class Startup
     {
@@ -23,7 +24,10 @@
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+            services.AddMvc(options =>
+            {
+                options.Filters.Add(typeof(WebApiHost.Filters.DomainExceptionFilter));
+            }).SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 
             // Configre Next level Ioc for Business Services
             ConfgureNextLevelDI(services);
@@ -38,6 +42,10 @@
                 app.UseDeveloperExceptionPage();
             }
 
+            // Custom Middleware
+            app.UseBasicAuth();
+           
+            // MVC Middleware
             app.UseMvc();
         }
 
@@ -48,7 +56,7 @@
             var cotnainer = IocServiceStackConfig.Configure();
 
             cotnainer.GetSharedContainer()
-                    .Add<ISettings>(() => new Settings() { ConnectionString = "" });
+                    .Add<ISettings>(() => new Settings() { ConnectionString = "<setup-connection-string-here>" });
         }
     }
 }

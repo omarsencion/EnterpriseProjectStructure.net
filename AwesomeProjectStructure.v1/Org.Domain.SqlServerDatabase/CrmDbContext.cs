@@ -1,4 +1,4 @@
-﻿namespace Org.Domain.Database
+﻿namespace Org.Domain.SqlServerDatabase
 {
     using System;
     using Microsoft.EntityFrameworkCore;

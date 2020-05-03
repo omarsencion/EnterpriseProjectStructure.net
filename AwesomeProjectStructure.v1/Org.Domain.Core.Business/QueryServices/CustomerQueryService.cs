@@ -1,4 +1,4 @@
-﻿namespace Org.Domain.Business
+﻿namespace Org.Domain.Core.Business.QueryServices
 {
     using System;
     using System.Collections.Generic;

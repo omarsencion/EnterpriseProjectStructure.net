@@ -2,12 +2,12 @@
   "AppDependencies": {
     "Name": "BusinessServices",
     "Modules": [
-      "Org.Domain.Business"
+      "Org.Domain.Core.Business"
     ],
     "Dependencies": {
       "Name": "Data",
       "Modules": [
-        "Org.Domain.Data",
+        "Org.Domain.Core.Data",
         "Org.Domain.Storage.Disk"
       ],
       "Dependencies": {
@@ -20,7 +20,7 @@
   },
   "SharedDependencies": {
     "Modules": [
-      "Org.Domain.Common"
+      "Org.Domain.Core.Common"
     ]
   },
   "StrictMode": true,

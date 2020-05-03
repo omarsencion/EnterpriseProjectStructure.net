@@ -1,4 +1,4 @@
-﻿namespace Org.Domain.Business.Validator
+﻿namespace Org.Domain.Core.Business.Validators
 {
     using FluentValidation;
     using IocServiceStack;

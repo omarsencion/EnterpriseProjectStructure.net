@@ -1,4 +1,4 @@
-﻿namespace Org.Domain.Business.Validator
+﻿namespace Org.Domain.Core.Business.Validators
 {
     using FluentValidation;
     using IocServiceStack;
@@ -33,8 +33,7 @@
                 .NotEmpty();
 
             RuleFor(customer => customer.LastName)
-                .NotEmpty()
-                    .EmailAddress();
+                .NotEmpty();
 
             RuleFor(customer => customer.City)
                 .NotEmpty();

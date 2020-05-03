@@ -1,4 +1,4 @@
-﻿namespace Org.Domain.Common
+﻿namespace Org.Domain.Core.Common
 {
     using Abstractions.Common;
 

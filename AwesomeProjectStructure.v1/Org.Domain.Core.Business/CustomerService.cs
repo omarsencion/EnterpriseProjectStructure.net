@@ -1,4 +1,4 @@
-﻿namespace Org.Domain.Business
+﻿namespace Org.Domain.Core.Business
 {
     using System;
     using FluentValidation;
@@ -9,7 +9,7 @@
     using Abstractions.Data;
     using Abstractions.Storage;
     using Abstractions.Business;
-    using Validator;
+    using Validators;
  
     [Service]
     public sealed class CustomerService : ICustomer

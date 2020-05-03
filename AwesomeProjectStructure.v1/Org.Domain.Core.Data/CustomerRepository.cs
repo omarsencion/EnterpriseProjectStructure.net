@@ -1,4 +1,4 @@
-﻿namespace Org.Domain.Repositories
+﻿namespace Org.Domain.Core.Data
 {
     using System.Linq;
     using System.Collections.Generic;
