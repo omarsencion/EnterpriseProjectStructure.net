@@ -1,0 +1,34 @@
+﻿{
+  "AppDependencies": {
+    "Name": "BusinessServices",
+    "Modules": [
+      "Org.Domain.Core.Business"
+      //"ClientSpecificExtension"
+    ],
+    "Dependencies": {
+      "Name": "Data",
+      "Modules": [
+        "Org.Domain.Core.Data",
+        "Org.Domain.Storage.Disk"
+      ],
+      "Dependencies": {
+        "Name": "DbContext",
+        "Modules": [
+          "Org.Domain.SqlServerDatabase"
+        ]
+      }
+    }
+  },
+  "SharedDependencies": {
+    "Modules": [
+      "Org.Domain.Core.Common"
+    ]
+  },
+  "StrictMode": false,
+  "Addition": [
+    {
+      //"Module": "ClientSpecificExtension",
+      //"LoadFrom": "./bin/Debug/netcoreapp2.2/" //For Devlopment Environment
+    }
+  ]
+}
